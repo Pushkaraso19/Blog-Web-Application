@@ -1,0 +1,157 @@
+.underline {
+    text-decoration: underline;
+}
+
+.blue{
+    color: #2196f3;
+}
+.black{
+    color: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2196f3;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post {
+    position: relative;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s;
+}
+
+.post h3 {
+    margin: 0 0 0.5rem;
+    color: #333;
+    width: fit-content;
+}
+
+.post .content {
+    font-size: 1rem;
+    color: #555;
+}
+
+.post:hover {
+    transform: scale(1.02); 
+}
+
+.post-operation {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.post-operation h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.post-operation input, .post-operation textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.post-operation button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.post-operation button:hover {
+    background-color: #2196f3;
+}
+
+label{
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+.container {
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline;
+    width: fit-content;
+    left: 99%;
+}
+
+.three-dots {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 0;
+    outline: none;
+    color: #333;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    min-width: 150px; 
+    overflow: hidden; 
+}
+
+.dropdown-content.active {
+    display: block; 
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}

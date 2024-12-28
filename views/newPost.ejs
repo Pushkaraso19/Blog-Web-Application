@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Post : BlogNest - A cozy space for your thoughts and idea</title>
+</head>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <form action="/add" method="POST" class="post-operation container">
+        <h2>Add a New Post</h2>
+        <label for="title">Title:</label>
+        <input type="text" name="title" placeholder="Post Title" required>
+        <label for="title">Content:</label>
+        <textarea name="content" placeholder="Write your content here..." required></textarea>
+        <button type="submit" class="btn">Add Post</button>
+    </form>
+    <% if (completed) {%>
+        <script>alert("Post added successfully!");</script>
+    <% }; %>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <div class="container">
+        <h2>Recent Posts</h2>
+        <% if (postList && postList.length > 0) { %>
+          <ul class="post-list">
+              <% postList.forEach(post => { %>
+                <li class="post">
+                  <span class="dropdown">
+                    <button class="three-dots" onclick="toggleDropdown(event)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                      </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/editPostD?id= <%= post.id%>">Edit Post</a>
+                        <a href="/deletePostD?id= <%= post.id%>" onclick="confirm(`Are you sure you want to delete this post?`)">Delete Post</a>
+                    </div>
+                  </span>
+                  <h3><%= post.title %></h3>
+                  <p class="content"><%= post.content %></p>
+              </li>
+              <% }); %>              
+            </ul>
+        <% } else { %>
+          <h3>There are no posts created yet</h3>
+          <form action="/newPost" method="GET">
+              <button type="submit" class="btn btn-primary">Create Post</button>
+          </form>
+        <% } %>
+    </div>
+    <% if (deleted) {%>
+      <script>alert("Post deleted successfully!");</script>
+    <% }; %>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
