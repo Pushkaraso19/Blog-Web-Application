@@ -30,6 +30,16 @@ main h2 {
     color: #2196f3;
 }
 
+.no-posts{
+    position: relative;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
 .post-list {
     list-style: none;
     padding: 0;
